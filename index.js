@@ -7,6 +7,7 @@ const PORT = process.env.PORT;
 const server = express();
 const authorsRoutes = require("./src/api/authors/authors.routes");
 const wavesRoutes = require("./src/api/waves/waves.routes");
+const hackersRoutes = require("./src/api/hackers/hackers.routes");
 
 const router = express.Router();
 
@@ -33,6 +34,7 @@ server.use(express.urlencoded({ extended: false }));
 //Aquí las rutas
 
 
+server.use("/hackers", hackersRoutes);
 server.use("/authors", authorsRoutes);
 server.use("/waves", wavesRoutes);
 server.use("/", (req,res) =>{
