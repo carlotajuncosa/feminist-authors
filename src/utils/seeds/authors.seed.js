@@ -47,17 +47,31 @@ const authors = [
     },
   },
   {
-    name: "Valerie Solanas",
-    birthdate: "09-04-1936",
-    deathdate: "26-04-1988",
+    name: "Tarana Burke",
+    birthdate: "12-09-1973",
+    deathdate: "",
     nationality: "USA",
-    ocupation: "Writer",
-    zodiacSign: "Aries",
+    ocupation: "Activist, Teacher, Celeb",
+    zodiacSign: "Virgo",
     authorImg:
-      "https://upload.wikimedia.org/wikipedia/en/3/36/Valerie_Solanas.jpg",
+      "https://media.vogue.es/photos/5f468d19df2a16b8822ae676/1:1/w_2658,h_2658,c_limit/Tarana-J-Burke-vogue-170820-credit-Dougal-Macarthur.jpg",
     mostAwardWork: {
-      title: "SCUM manifesto",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5LEtCk8UU60zYFFkvdqlntXsdYxGvl8CT4VGhU41cKWvXMzMltiyVFGLG5jPVF33xOJ8&usqp=CAU",
+      title: "#metoo",
+      img: "https://i0.wp.com/afrofeminas.com/wp-content/uploads/2021/06/Blog-cover-images-new-website-84.png?fit=2000%2C1000&ssl=1",
+    },
+  },
+  {
+    name: "POR RELLENAR",
+    birthdate: "12-09-1973",
+    deathdate: "",
+    nationality: "USA",
+    ocupation: "Activist, Teacher, Celeb",
+    zodiacSign: "Virgo",
+    authorImg:
+      "https://media.vogue.es/photos/5f468d19df2a16b8822ae676/1:1/w_2658,h_2658,c_limit/Tarana-J-Burke-vogue-170820-credit-Dougal-Macarthur.jpg",
+    mostAwardWork: {
+      title: "#metoo",
+      img: "https://i0.wp.com/afrofeminas.com/wp-content/uploads/2021/06/Blog-cover-images-new-website-84.png?fit=2000%2C1000&ssl=1",
     },
   },
 ];
