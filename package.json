@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "resetAuthors": "node ./src/utils/seeds/authors.seed.js",
+    "resetHackers": "node ./src/utils/seeds/hackers.seed.js",
+    "resetWaves": "node ./src/utils/seeds/waves.seed.js"
+    
   },
   "repository": {
     "type": "git",

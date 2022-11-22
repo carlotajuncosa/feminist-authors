@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const connectDb = require("../database/db");
-const Author = require("../../api/authors/authors.model");
+const Author = require("../../api/authors/authors.models");
 
 const authors = [
   {

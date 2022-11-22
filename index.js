@@ -6,6 +6,7 @@ const cors = require("cors");
 const PORT = process.env.PORT;
 const server = express();
 const authorsRoutes = require("./src/api/authors/authors.routes");
+const wavesRoutes = require("./src/api/waves/waves.routes");
 
 const router = express.Router();
 
@@ -30,7 +31,11 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
 
 //Aquí las rutas
+
+
 server.use("/authors", authorsRoutes);
+
+server.use("/waves", wavesRoutes);
 
 server.use("/", (req,res) =>{
   return res.status(200).json("OK Computer");

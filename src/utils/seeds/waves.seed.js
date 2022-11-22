@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const connectDb = require("../database/db");
-const Wave = require("../../api/waves/waves.model");
+const Wave = require("../../api/waves/waves.models");
 
 const waves = [
   {
@@ -20,7 +20,7 @@ const waves = [
   {
     wave: "The third wave",
     century: "XX",
-    description: "",
+    description: "Thanks to the institutional victories of second-wave feminism, women enjoyed more rights and power going into the 1990s. They were able to think about other aspects of their identity, welcoming individuality and rebellion. This was an era of reclaiming. Important cultural touchstones include Eve Ensler’s The Vagina Monologues, the Guerilla Girls, and punk rock riot grrls. Many women more freely expressed their sexuality in how they spoke, dressed, and acted. This sometimes bewildered 2nd-wave feminists, many of whom had resisted traditional femininity. While many ideas and mini-movements swirled around in this time, the one “rule” was that there weren’t rules. A woman should choose how she lived her life. Third-wave feminism also became more conscious of race. Kimberle Crenshaw, a gender and critical-race scholar, coined the phrase “intersectionality” in 1989. The term refers to how different kinds of oppression – like those based on gender and race – intersect with each other. While mainstream first and second-wave feminism had largely ignored or neglected racial disparities within gender, the Third wave paid more attention.  The phrase “third-wave feminism” was coined in 1992 by Rebecca Walker, a 23-year old Black bisexual woman. When the internet became more commonplace, it was even easier to hear perspectives and ideas from feminists around the world. Feminism was expanding.",
     img: "https://img.elephantjournal.com/wp-content/uploads/2018/01/38928103985_e7b6e132df_z.jpg",
   },
   {

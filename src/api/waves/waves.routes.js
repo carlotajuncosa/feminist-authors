@@ -3,8 +3,8 @@ const Wave = require("./waves.models");
 
 const router = express.Router();
 
-const upload = require("../../middlewares/file");
-const deleteFile = require("../../middlewares/deletefile");
+const upload = require("../middleware/files");
+const deleteFile = require("../middleware/deletefile");
 
 
 router.get("/waves", async (req, res, next) => {
