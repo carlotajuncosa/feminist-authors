@@ -32,6 +32,10 @@ server.use(express.urlencoded({ extended: false }));
 //Aquí las rutas
 server.use("/authors", authorsRoutes);
 
+server.use("/", (req,res) =>{
+  return res.status(200).json("OK Computer");
+});
+
 //cualquier ruta que NO coincida con ninguna de nuestras rutas ya definidas, devolverá un error 404
 server.use("*", (req, res) => {
   const error = new Error("ERROR 404! THE ROUTE DOES NOT EXIST");

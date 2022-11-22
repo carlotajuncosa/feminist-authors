@@ -4,8 +4,8 @@ const Author = require("./authors.models");
 // Crear router
 const router = express.Router();
 
-const upload = require("../../middlewares/file");
-const deleteFile = require("../../middlewares/deletefile");
+const upload = require("../middleware/files");
+const deleteFile = require("../middleware/deletefile");
 
 // Añadimos rutas
 router.get("/", async (req, res, next) => {
