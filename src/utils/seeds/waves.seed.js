@@ -30,3 +30,28 @@ const waves = [
     img: "https://www.1069thex.com/files/2022/02/I0eGL3gMu60-605x403.jpg",
   },
 ];
+
+
+connectDb()
+  .then(async () => {
+    const allWaves = await Wave.find().lean();
+
+    if (!allWaves.length) {
+      console.log("[seed]: No waves found, continuing...");
+    } else {
+      console.log(`[seed]: ${allWaves.length} wave(s) found.`);
+      await Author.collection.drop();
+      console.log("[seed]: Collection 'waves' succesfully removed");
+    }
+  })
+  .catch((error) =>
+    console.log("There has been an error removing the waves ---> " + error)
+  )
+  .then(async () => {
+    await Wave.insertMany(waves);
+    console.log("[seed]: New waves succesfully uploaded to the database");
+  })
+  .catch((error) =>
+    console.log("There has been an error inserting the waves ---> " + error)
+  )
+  .finally(() => mongoose.disconnect());

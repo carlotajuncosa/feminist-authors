@@ -7,7 +7,7 @@ const upload = require("../middleware/files");
 const deleteFile = require("../middleware/deletefile");
 
 
-router.get("/waves", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try {
       const allWaves = await Wave.find().lean();
       return res.status(200).json(allWaves);
@@ -17,7 +17,7 @@ router.get("/waves", async (req, res, next) => {
     return response.send("Server funcionando");
   });
 
-  router.get("/waves/:id", async (req, res, next) => {
+  router.get("/:id", async (req, res, next) => {
     try {
       const id = req.params.id;
       const wave = await Wave.findById(id).lean();
@@ -27,7 +27,7 @@ router.get("/waves", async (req, res, next) => {
     }
   });
 
-  router.post("/waves/create", upload.single("img"), async (req, res, next) => {
+  router.post("/create", upload.single("img"), async (req, res, next) => {
     try {
       const wave = req.body;
       if (req.file) {
@@ -41,7 +41,7 @@ router.get("/waves", async (req, res, next) => {
     }
   });
 
-  router.put("/waves/edit/:id", async (req, res, next) => {
+  router.put("/edit/:id", async (req, res, next) => {
     try {
       const id = req.params.id;
       const wave = req.body;
@@ -66,7 +66,7 @@ router.get("/waves", async (req, res, next) => {
     }
   });
 
-  router.delete("/waves/delete/:id", async (req, res, next) => {
+  router.delete("/delete/:id", async (req, res, next) => {
     try {
       const id = req.params.id;
       const waveToDelete = await Wave.findByIdAndDelete(id);

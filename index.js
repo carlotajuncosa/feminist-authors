@@ -34,9 +34,7 @@ server.use(express.urlencoded({ extended: false }));
 
 
 server.use("/authors", authorsRoutes);
-
 server.use("/waves", wavesRoutes);
-
 server.use("/", (req,res) =>{
   return res.status(200).json("OK Computer");
 });
