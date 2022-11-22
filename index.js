@@ -43,7 +43,4 @@ server.listen(PORT, () => {
   console.log(`Servidor a la espera de órdenes en http://localhost:${PORT}`);
 });
 
-//! ESTA SOBRA >-->
-router.get("/", (request, response) => {
-  return response.send("Servidor funcionando");
-});
+
